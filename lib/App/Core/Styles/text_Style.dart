@@ -1,9 +1,10 @@
+import 'package:admin_caleb_g/App/Core/Styles/App_Colors.dart';
 import 'package:flutter/material.dart';
 
 class style {
   static TextStyle style60({required BuildContext context}) {
     return TextStyle(
-        color: Colors.white,
+        color:AppColors.kscondColor,
         fontSize: MediaQuery.of(context).size.width * 0.2,
         fontWeight: FontWeight.bold);
   }

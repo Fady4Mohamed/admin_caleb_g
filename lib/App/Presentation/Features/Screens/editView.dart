@@ -4,9 +4,10 @@ import 'package:admin_caleb_g/App/Core/widgets/ncustomtextfield.dart';
 import 'package:admin_caleb_g/App/Presentation/Features/widgets/FeaturesAppBar.dart';
 import 'package:flutter/material.dart';
 
-class AddView extends StatelessWidget {
-  const AddView({super.key});
+class editView extends StatelessWidget {
+  const editView({super.key});
 
+ 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -14,7 +15,7 @@ class AddView extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            FeaturesAppBar(size: size, titel: 'Add'),
+            FeaturesAppBar(size: size, titel: 'Edit'),
             SizedBox(
               height: size.height * .05,
             ),
@@ -46,7 +47,7 @@ class AddView extends StatelessWidget {
                     CustomeButton(
                       size: size,
                       onPressed: () {},
-                      titel: 'add',
+                      titel: 'edit',
                       color: AppColors.kMainColor,
                     ),
                   ],

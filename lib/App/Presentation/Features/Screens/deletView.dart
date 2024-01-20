@@ -4,8 +4,10 @@ import 'package:admin_caleb_g/App/Core/widgets/ncustomtextfield.dart';
 import 'package:admin_caleb_g/App/Presentation/Features/widgets/FeaturesAppBar.dart';
 import 'package:flutter/material.dart';
 
-class AddView extends StatelessWidget {
-  const AddView({super.key});
+class DeletView
+ extends StatelessWidget {
+  const DeletView
+  ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class AddView extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            FeaturesAppBar(size: size, titel: 'Add'),
+            FeaturesAppBar(size: size, titel: 'Delet'),
             SizedBox(
               height: size.height * .05,
             ),
@@ -29,24 +31,10 @@ class AddView extends StatelessWidget {
                     SizedBox(
                       height: size.height * .05,
                     ),
-                    ncustomtextfield(
-                        icon: Icons.copyright_outlined,
-                        hintText: 'food salary '),
-                    SizedBox(
-                      height: size.height * .05,
-                    ),
                     CustomeButton(
                       size: size,
                       onPressed: () {},
-                      titel: 'choice image',
-                    ),
-                    SizedBox(
-                      height: size.height * .1,
-                    ),
-                    CustomeButton(
-                      size: size,
-                      onPressed: () {},
-                      titel: 'add',
+                      titel: 'delet',
                       color: AppColors.kMainColor,
                     ),
                   ],
