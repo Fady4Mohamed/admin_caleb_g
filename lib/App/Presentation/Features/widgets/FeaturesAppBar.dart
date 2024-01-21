@@ -22,16 +22,16 @@ class FeaturesAppBar extends StatelessWidget {
           child: Row(
             children: [
      
-     IconButton(
+     MediaQuery.of(context).size.width<600? IconButton(
      onPressed: () {
        Navigator.pop(context);
      },
      icon:const Icon(
        Icons.chevron_left,
        size: 40,
-     )),
+     )):SizedBox(),
      const Spacer(flex: 3),
-     Text(titel,style: style.style22(context: context),),
+     Text(titel,style: style.style22(size: size),),
      const Spacer(flex: 4),
             ],
           ),

@@ -1,35 +1,33 @@
+import 'package:admin_caleb_g/App/Presentation/Features/widgets/OrderGuidetext.dart';
+import 'package:admin_caleb_g/App/Presentation/Features/widgets/OrderListt.dart';
 import 'package:admin_caleb_g/App/Presentation/Features/widgets/FeaturesAppBar.dart';
 import 'package:flutter/material.dart';
 
 class OrdersView extends StatelessWidget {
-  const OrdersView({super.key});
-
+  const OrdersView({super.key, required this.size});
+final Size size;
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            FeaturesAppBar(size: size, titel: 'orders'),
-            SizedBox(
-              height: size.height * .05,
-            ),
-            SizedBox(
-              height: size.height * .8,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: size.width * .06),
-                child: Expanded(
-                    child: ListView(
-                  children: [
-                  
-                  ],
-                )),
+        child: SizedBox(
+          height: size.height,
+          width: size.width,
+          child: Column(
+            children: [
+              FeaturesAppBar(size: size, titel: 'orders'),
+              OrderGuidetext(size: size),
+              SizedBox(
+                height: size.height * 0.01,
               ),
-            )
-          ],
+              OrderList(size: size),
+            ],
+          ),
         ),
       ),
     );
   }
 }
+
+class CartAppBar {}

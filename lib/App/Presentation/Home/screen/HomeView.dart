@@ -17,6 +17,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(size.width);
     return Scaffold(
       backgroundColor: AppColors.kMainColor,
       body: SingleChildScrollView(
@@ -26,7 +27,7 @@ class HomeView extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: size.height*.03,),
-              Text('CALEB G Restaurant',style:style.style60(context: context) ,),
+              Text('CALEB G Restaurant',style:style.style60(size: size) ,),
               const Spacer(flex: 2,),
 
               CustomeButton(size: size, onPressed: (){
@@ -48,7 +49,7 @@ class HomeView extends StatelessWidget {
               const Spacer(flex: 1,),
 
               CustomeButton(size: size, onPressed: (){
-                 Navigator.push(context, MaterialPageRoute(builder: (context){return OrdersView();}));
+                 Navigator.push(context, MaterialPageRoute(builder: (context){return OrdersView(size: size,);}));
               }, titel: 'view orders'),
               
               const Spacer(flex: 3,),

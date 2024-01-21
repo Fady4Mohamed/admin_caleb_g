@@ -1,5 +1,6 @@
 
 import 'package:admin_caleb_g/App/Presentation/Home/screen/HomeView.dart';
+import 'package:admin_caleb_g/App/Presentation/Home/screen/windHomeView.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,13 +14,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size= MediaQuery.of(context).size;
+    print(size.width);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
        scaffoldBackgroundColor: Color(0xffF2F2F2),
       ),
-      home:  HomeView(size: size),
+      home:  chois(size),
     );
   }
+}
+Widget chois(Size size){
+if(size.width<600)
+return HomeView(size: size);
+ 
+ return WindHomeView();
+
 }
