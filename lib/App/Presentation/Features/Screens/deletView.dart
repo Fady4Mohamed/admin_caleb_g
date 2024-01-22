@@ -7,11 +7,11 @@ import 'package:flutter/material.dart';
 class DeletView
  extends StatelessWidget {
   const DeletView
-  ({super.key});
-
+  ({super.key, required this.size});
+  final Size size ;
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

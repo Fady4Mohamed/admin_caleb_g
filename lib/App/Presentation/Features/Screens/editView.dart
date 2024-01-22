@@ -5,12 +5,12 @@ import 'package:admin_caleb_g/App/Presentation/Features/widgets/FeaturesAppBar.d
 import 'package:flutter/material.dart';
 
 class editView extends StatelessWidget {
-  const editView({super.key});
+  const editView({super.key, required this.size});
 
- 
+ final Size size ;
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
