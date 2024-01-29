@@ -23,35 +23,34 @@ class editView extends StatelessWidget {
               height: size.height * .8,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: size.width * .06),
-                child: Expanded(
-                    child: ListView(
-                  children: [
-                    ncustomtextfield(icon: Icons.abc, hintText: 'food name '),
-                    SizedBox(
-                      height: size.height * .05,
-                    ),
-                    ncustomtextfield(
-                        icon: Icons.copyright_outlined,
-                        hintText: 'food salary '),
-                    SizedBox(
-                      height: size.height * .05,
-                    ),
-                    CustomeButton(
-                      size: size,
-                      onPressed: () {},
-                      titel: 'choice image',
-                    ),
-                    SizedBox(
-                      height: size.height * .1,
-                    ),
-                    CustomeButton(
-                      size: size,
-                      onPressed: () {},
-                      titel: 'edit',
-                      color: AppColors.kMainColor,
-                    ),
-                  ],
-                )),
+                child: ListView(
+                                  children: [
+                ncustomtextfield(icon: Icons.abc, hintText: 'food name '),
+                SizedBox(
+                  height: size.height * .05,
+                ),
+                ncustomtextfield(
+                    icon: Icons.copyright_outlined,
+                    hintText: 'food salary '),
+                SizedBox(
+                  height: size.height * .05,
+                ),
+                CustomeButton(
+                  size: size,
+                  onPressed: () {},
+                  titel: 'choice image',
+                ),
+                SizedBox(
+                  height: size.height * .1,
+                ),
+                CustomeButton(
+                  size: size,
+                  onPressed: () {},
+                  titel: 'edit',
+                  color: AppColors.kMainColor,
+                ),
+                                  ],
+                                ),
               ),
             )
           ],

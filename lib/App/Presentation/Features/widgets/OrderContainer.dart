@@ -15,7 +15,7 @@ class OrderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: size.width * .8,
-      height: size.height * .13,
+      height: size.height * .15,
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
           color: Colors.grey.withOpacity(0.3), // Color of the shadow

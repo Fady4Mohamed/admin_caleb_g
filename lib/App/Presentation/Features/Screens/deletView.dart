@@ -24,21 +24,20 @@ class DeletView
               height: size.height * .8,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: size.width * .06),
-                child: Expanded(
-                    child: ListView(
-                  children: [
-                    ncustomtextfield(icon: Icons.abc, hintText: 'food name '),
-                    SizedBox(
-                      height: size.height * .05,
-                    ),
-                    CustomeButton(
-                      size: size,
-                      onPressed: () {},
-                      titel: 'delet',
-                      color: AppColors.kMainColor,
-                    ),
-                  ],
-                )),
+                child: ListView(
+                                  children: [
+                ncustomtextfield(icon: Icons.abc, hintText: 'food name '),
+                SizedBox(
+                  height: size.height * .05,
+                ),
+                CustomeButton(
+                  size: size,
+                  onPressed: () {},
+                  titel: 'delet',
+                  color: AppColors.kMainColor,
+                ),
+                                  ],
+                                ),
               ),
             )
           ],
