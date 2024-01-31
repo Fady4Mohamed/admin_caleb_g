@@ -1,6 +1,7 @@
 import 'package:admin_caleb_g/App/Core/Styles/App_Colors.dart';
 import 'package:admin_caleb_g/App/Core/widgets/customeButton.dart';
 import 'package:admin_caleb_g/App/Core/widgets/ncustomtextfield.dart';
+import 'package:admin_caleb_g/App/Presentation/Features/widgets/ChoiceImage.dart';
 import 'package:admin_caleb_g/App/Presentation/Features/widgets/FeaturesAppBar.dart';
 import 'package:flutter/material.dart';
 
@@ -40,11 +41,7 @@ class AddView extends StatelessWidget {
                 SizedBox(
                   height: size.height * .05,
                 ),
-                CustomeButton(
-                  size: size,
-                  onPressed: () {},
-                  titel: 'choice image',
-                ),
+                ChoiceImage(size: size),
                 SizedBox(
                   height: size.height * .1,
                 ),
@@ -64,3 +61,4 @@ class AddView extends StatelessWidget {
     );
   }
 }
+
