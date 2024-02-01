@@ -5,10 +5,9 @@ import 'package:flutter/material.dart';
 
 class OrdersView extends StatelessWidget {
   const OrdersView({super.key, required this.size});
-final Size size;
+  final Size size;
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       body: SingleChildScrollView(
         child: SizedBox(
@@ -29,5 +28,3 @@ final Size size;
     );
   }
 }
-
-class CartAppBar {}
