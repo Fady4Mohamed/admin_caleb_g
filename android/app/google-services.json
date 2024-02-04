@@ -1,85 +1,34 @@
 {
   "project_info": {
-    "project_number": "974863485357",
-    "project_id": "caleb-g",
-    "storage_bucket": "caleb-g.appspot.com"
+    "project_number": "1032299672180",
+    "project_id": "resturant-9e9ef",
+    "storage_bucket": "resturant-9e9ef.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:974863485357:android:5eb25144798ab6e972f924",
+        "mobilesdk_app_id": "1:1032299672180:android:1d8e908638425c0a149721",
         "android_client_info": {
           "package_name": "com.example.admin_caleb_g"
         }
       },
       "oauth_client": [
         {
-          "client_id": "974863485357-1lep39o1tj6mj9fvh16j0id0bfgbhh9s.apps.googleusercontent.com",
+          "client_id": "1032299672180-hv39tr9hqqjv0blfnilra2pp37q2jspu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDnDzBl1oTjX3MMFSUv4yyx1-K1cRjZMgM"
+          "current_key": "AIzaSyChyNZv77Yo4W2fTNFvnmROGl-IzYoKPhU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "974863485357-1lep39o1tj6mj9fvh16j0id0bfgbhh9s.apps.googleusercontent.com",
+              "client_id": "1032299672180-hv39tr9hqqjv0blfnilra2pp37q2jspu.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "974863485357-cq4rpk024up1npj1k2on28a854b4qfbc.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.calebg.RunnerTests"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:974863485357:android:bd7771de05ab439f72f924",
-        "android_client_info": {
-          "package_name": "com.example.caleb_g"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "974863485357-drmujmd845vfa0hi42nko4r5rd8cu7gh.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.caleb_g",
-            "certificate_hash": "4c84c319660c6972b48a860a3a56de1c8f7d36ee"
-          }
-        },
-        {
-          "client_id": "974863485357-1lep39o1tj6mj9fvh16j0id0bfgbhh9s.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDnDzBl1oTjX3MMFSUv4yyx1-K1cRjZMgM"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "974863485357-1lep39o1tj6mj9fvh16j0id0bfgbhh9s.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "974863485357-cq4rpk024up1npj1k2on28a854b4qfbc.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.calebg.RunnerTests"
-              }
             }
           ]
         }

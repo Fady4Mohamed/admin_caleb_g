@@ -44,42 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBcarr5-67cunRqX25G9sdhGKr_JHzVZYE',
-    appId: '1:974863485357:web:b82001a41663b36272f924',
-    messagingSenderId: '974863485357',
-    projectId: 'caleb-g',
-    authDomain: 'caleb-g.firebaseapp.com',
-    storageBucket: 'caleb-g.appspot.com',
-    measurementId: 'G-NGLMQNCG1R',
+    apiKey: 'AIzaSyCSa5ncngKgXcI4s-ZeX8Ctipx3Z5c2eWw',
+    appId: '1:1032299672180:web:cd22ea6c410ea939149721',
+    messagingSenderId: '1032299672180',
+    projectId: 'resturant-9e9ef',
+    authDomain: 'resturant-9e9ef.firebaseapp.com',
+    storageBucket: 'resturant-9e9ef.appspot.com',
+    measurementId: 'G-4L9HEXQ2D7',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDnDzBl1oTjX3MMFSUv4yyx1-K1cRjZMgM',
-    appId: '1:974863485357:android:5eb25144798ab6e972f924',
-    messagingSenderId: '974863485357',
-    projectId: 'caleb-g',
-    storageBucket: 'caleb-g.appspot.com',
+    apiKey: 'AIzaSyChyNZv77Yo4W2fTNFvnmROGl-IzYoKPhU',
+    appId: '1:1032299672180:android:1d8e908638425c0a149721',
+    messagingSenderId: '1032299672180',
+    projectId: 'resturant-9e9ef',
+    storageBucket: 'resturant-9e9ef.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD5jQOfcObYwiAMA82VStwjmupwTJ5vPMQ',
-    appId: '1:974863485357:ios:e5b42d799aeb515a72f924',
-    messagingSenderId: '974863485357',
-    projectId: 'caleb-g',
-    storageBucket: 'caleb-g.appspot.com',
-    androidClientId: '974863485357-drmujmd845vfa0hi42nko4r5rd8cu7gh.apps.googleusercontent.com',
-    iosClientId: '974863485357-vmemr4vikchcprfc1hsta9v61ceqgp29.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAg-yEqdifAm6GgOJGQ6K7xin47TdrRFjA',
+    appId: '1:1032299672180:ios:ce999e0693763514149721',
+    messagingSenderId: '1032299672180',
+    projectId: 'resturant-9e9ef',
+    storageBucket: 'resturant-9e9ef.appspot.com',
+    iosClientId: '1032299672180-r0i3n9su4koqmv84tlc4i121q1fhc43n.apps.googleusercontent.com',
     iosBundleId: 'com.example.adminCalebg',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD5jQOfcObYwiAMA82VStwjmupwTJ5vPMQ',
-    appId: '1:974863485357:ios:713a08afad7c460872f924',
-    messagingSenderId: '974863485357',
-    projectId: 'caleb-g',
-    storageBucket: 'caleb-g.appspot.com',
-    androidClientId: '974863485357-drmujmd845vfa0hi42nko4r5rd8cu7gh.apps.googleusercontent.com',
-    iosClientId: '974863485357-78c8h0tl1gllrrfgdm8he5tvvjf8s321.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAg-yEqdifAm6GgOJGQ6K7xin47TdrRFjA',
+    appId: '1:1032299672180:ios:d6cfca3df9846168149721',
+    messagingSenderId: '1032299672180',
+    projectId: 'resturant-9e9ef',
+    storageBucket: 'resturant-9e9ef.appspot.com',
+    iosClientId: '1032299672180-9cfjigu2lj5nvhe1918s0geodja0on5j.apps.googleusercontent.com',
     iosBundleId: 'com.example.adminCalebg.RunnerTests',
   );
 }

@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:path/path.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:admin_caleb_g/App/Data/Models/FoodModel.dart';
@@ -8,11 +9,12 @@ part 'add_state.dart';
 
 class AddCubit extends Cubit<AddState> {
   AddCubit() : super(AddInitial());
-  CollectionReference foods = FirebaseFirestore.instance.collection('food');
+  
   File? file;
 
   Future<void> addfood(FoodModel foodModel) async {
     emit(AddLoding());
+    CollectionReference foods = FirebaseFirestore.instance.collection('food');
     foods.add({
       'name': foodModel.name,
       'category': foodModel.category,
@@ -29,7 +31,7 @@ class AddCubit extends Cubit<AddState> {
 
   Future<String> uploadImage() async {
     if (file != null) {
-      String Imagepath = file!.path;
+      String Imagepath =basename(file!.path);
       final storageRef = FirebaseStorage.instance.ref(Imagepath);
       await storageRef.putFile(file!);
       String url;
