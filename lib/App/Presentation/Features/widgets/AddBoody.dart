@@ -72,16 +72,31 @@ class _AddBoodyState extends State<AddBoody> {
                   listener: (context, state) async {
                     if (state is AddLoding) {
                       buttoncolor = Colors.amber;
+                      setState(() {
+                        
+                      });
                     }
                     if (state is AddFailer) {
                       buttoncolor = const Color.fromARGB(255, 95, 10, 4);
+                       setState(() {
+                        
+                      });
                       await Future.delayed(Duration(seconds: 2));
                       buttoncolor = AppColors.kMainColor;
+                       setState(() {
+                        
+                      });
                     }
                     if (state is AddSuccess) {
                       buttoncolor = Colors.green;
+                       setState(() {
+                        
+                      });
                       await Future.delayed(Duration(seconds: 2));
                       buttoncolor = AppColors.kMainColor;
+                       setState(() {
+                        
+                      });
                     }
                   },
                   child: CustomeButton(

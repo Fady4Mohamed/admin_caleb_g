@@ -1,13 +1,12 @@
-
 import 'dart:io';
 import 'package:admin_caleb_g/App/Core/widgets/customeButton.dart';
-import 'package:admin_caleb_g/App/Data/Manager/add%20cubit/add_cubit.dart';
+import 'package:admin_caleb_g/App/Data/Manager/editcubit/edit_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 
-class ChoiceImage extends StatefulWidget {
-  const ChoiceImage({
+class editChoiceImage extends StatefulWidget {
+  const editChoiceImage({
     super.key,
     required this.size,
   });
@@ -15,10 +14,10 @@ class ChoiceImage extends StatefulWidget {
   final Size size;
 
   @override
-  State<ChoiceImage> createState() => _ChoiceImageState();
+  State<editChoiceImage> createState() => _editChoiceImageState();
 }
 
-class _ChoiceImageState extends State<ChoiceImage> {
+class _editChoiceImageState extends State<editChoiceImage> {
 File? _file;
 
 imagepick()async {
@@ -26,7 +25,7 @@ final ImagePicker picker = ImagePicker();
 final XFile? image = await picker.pickImage(source: ImageSource.gallery);
 if (image!=null) {
 _file=File(image.path);
-BlocProvider.of<AddCubit>(context).file=_file;
+BlocProvider.of<EditCubit>(context).file=_file;
 setState(() {
 });
 }

@@ -1,6 +1,6 @@
 
 import 'package:admin_caleb_g/App/Core/Styles/App_Colors.dart';
-import 'package:admin_caleb_g/App/Presentation/auth/presentation/widgets/logincontanre.dart';
+import 'package:admin_caleb_g/App/Presentation/auth/widgets/logincontanre.dart';
 import 'package:flutter/material.dart';
 
 

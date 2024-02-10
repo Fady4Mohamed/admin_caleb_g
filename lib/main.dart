@@ -1,7 +1,5 @@
 import 'package:admin_caleb_g/App/Data/Manager/UI%20cubit/chrom_ui_cubit.dart';
-import 'package:admin_caleb_g/App/Presentation/Home/screen/HomeView.dart';
-import 'package:admin_caleb_g/App/Presentation/Home/screen/windHomeView.dart';
-import 'package:admin_caleb_g/App/Presentation/auth/presentation/loginView.dart';
+import 'package:admin_caleb_g/App/Presentation/auth/loginView.dart';
 import 'package:admin_caleb_g/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
