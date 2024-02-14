@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class logincontaner extends StatelessWidget {
-  const logincontaner({super.key});
-
+  const logincontaner({super.key, required this.size});
+final Size size;
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+   
     return MultiBlocProvider(
       providers: [
         BlocProvider(

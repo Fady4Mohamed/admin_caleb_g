@@ -14,12 +14,14 @@ class AddCubit extends Cubit<AddState> {
 
   Future<void> addfood(FoodModel foodModel) async {
     emit(AddLoding());
-    CollectionReference foods = FirebaseFirestore.instance.collection('food');
-    foods.add({
+    DocumentReference food = FirebaseFirestore.instance.collection('food').doc();
+
+    food.set({
       'name': foodModel.name,
       'category': foodModel.category,
       'price': foodModel.price,
-      'image': foodModel.image
+      'image': foodModel.image,
+      'id':food.id
     }).then((value) {
       emit(AddSuccess());
     })

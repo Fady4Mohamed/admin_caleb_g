@@ -21,9 +21,9 @@ class loginView extends StatelessWidget {
               children: [
                 SizedBox(
                   height: size.height,
-                  child:Image.asset('assats/Food,_vegetables_and_fruits_with_FA4A0C_color_background (2).png',fit: BoxFit.cover,),
+                  child: size.width<700?Image.asset('assats/Food,_vegetables_and_fruits_with_FA4A0C_color_background (2).png',fit: BoxFit.fill,):SizedBox(),
           ),
-               const logincontaner(),
+                logincontaner(size:size.width<700? size:Size(700, size.height)),
               ],
             ),
           ),

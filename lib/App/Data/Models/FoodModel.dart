@@ -3,8 +3,10 @@ class FoodModel {
   final double price;
   final String category;
   final String image;
+  final String? id;
   FoodModel(
-      {required this.category,
+      { this.id,
+      required this.category,
       required this.image,
       required this.price,
       required this.name});
@@ -14,6 +16,7 @@ class FoodModel {
         category: jsonData['category'],
         image: jsonData['image'],
         price: jsonData['price'],
+        id: jsonData['id'],
         name: jsonData['name']);
   }
 }
