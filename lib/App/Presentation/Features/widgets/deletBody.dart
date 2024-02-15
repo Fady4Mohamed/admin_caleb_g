@@ -1,13 +1,12 @@
 import 'package:admin_caleb_g/App/Core/Styles/App_Colors.dart';
 import 'package:admin_caleb_g/App/Core/widgets/customeButton.dart';
 import 'package:admin_caleb_g/App/Core/widgets/ncustomtextfield.dart';
-import 'package:admin_caleb_g/App/Data/Manager/editcubit/edit_cubit.dart';
-import 'package:admin_caleb_g/App/Presentation/Features/widgets/editchoisimage.dart';
+import 'package:admin_caleb_g/App/Data/Manager/delet%20cubit/delet_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class editviewBoody extends StatefulWidget {
-  const editviewBoody({
+class deletBoody extends StatefulWidget {
+  const deletBoody({
     super.key,
     required this.size,
   });
@@ -15,13 +14,12 @@ class editviewBoody extends StatefulWidget {
   final Size size;
 
   @override
-  State<editviewBoody> createState() => _editviewBoodyState();
+  State<deletBoody> createState() => _deletBoodyState();
 }
 
-class _editviewBoodyState extends State<editviewBoody> {
+class _deletBoodyState extends State<deletBoody> {
   Color buttoncolor = AppColors.kMainColor;
   String? name;
-  double? salary;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -40,34 +38,20 @@ class _editviewBoodyState extends State<editviewBoody> {
             SizedBox(
               height: widget.size.height * .05,
             ),
-            ncustomtextfield(
-              icon: Icons.copyright_outlined,
-              hintText: 'change salary ',
-              onchanged: (p0) {
-                salary = double.parse(p0);
-              },
-            ),
-            SizedBox(
-              height: widget.size.height * .05,
-            ),
-            editChoiceImage(size: widget.size),
-            SizedBox(
-              height: widget.size.height * .1,
-            ),
-            BlocListener<EditCubit, EditState>(
+           BlocListener<DeletCubit, DeletState>(
               listener: (context, state) async {
-                if (state is Editloding) {
+                if (state is Deletloding) {
                   buttoncolor = Colors.amber;
                   setState(() {});
                 }
-                if (state is Editfailure) {
+                if (state is Deletfailure) {
                   buttoncolor = const Color.fromARGB(255, 95, 10, 4);
                   setState(() {});
                   await Future.delayed(Duration(seconds: 2));
                   buttoncolor = AppColors.kMainColor;
                   setState(() {});
                 }
-                if (state is Editsuccess) {
+                if (state is Deletsuccess) {
                   buttoncolor = Colors.green;
                   setState(() {});
                   await Future.delayed(Duration(seconds: 2));
@@ -79,20 +63,13 @@ class _editviewBoodyState extends State<editviewBoody> {
                 size: widget.size,
                 onPressed: () async {
                   if (name != null) {
-                    String? url;
-                    if (BlocProvider.of<EditCubit>(context).file != null) {
-                      url = await BlocProvider.of<EditCubit>(context)
-                          .uploadImage();
-                    }
-
-                    BlocProvider.of<EditCubit>(context)
-                        .editdata(name: name!, image: url, salary: salary);
+                    BlocProvider.of<DeletCubit>(context).deletFood(name: name!);
                   }
                 },
-                titel: 'done',
+                titel: 'delet',
                 color: buttoncolor,
               ),
-            ),
+            )
           ],
         ),
       ),

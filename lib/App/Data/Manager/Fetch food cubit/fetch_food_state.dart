@@ -7,10 +7,10 @@ final class FetchFoodInitial extends FetchFoodState {}
 
 final class FetchFoodsuccsed extends FetchFoodState {}
 
-final class FetchFoodfailer extends FetchFoodState {
+final class FetchFoodfailure extends FetchFoodState {
   final String error;
 
-  FetchFoodfailer(this.error);
+  FetchFoodfailure(this.error);
 }
 
 final class FetchFoodloding extends FetchFoodState {}

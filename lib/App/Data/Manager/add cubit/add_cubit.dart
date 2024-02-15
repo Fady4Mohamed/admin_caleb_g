@@ -27,7 +27,7 @@ class AddCubit extends Cubit<AddState> {
     })
         // ignore: invalid_return_type_for_catch_error
         .catchError((error) {
-      emit(AddFailer(error: error.toString()));
+      emit(AddFailure(error: error.toString()));
     });
   }
 

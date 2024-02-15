@@ -18,29 +18,33 @@ class editChoiceImage extends StatefulWidget {
 }
 
 class _editChoiceImageState extends State<editChoiceImage> {
-File? _file;
+  File? _file;
 
-imagepick()async {
-final ImagePicker picker = ImagePicker();
-final XFile? image = await picker.pickImage(source: ImageSource.gallery);
-if (image!=null) {
-_file=File(image.path);
-BlocProvider.of<EditCubit>(context).file=_file;
-setState(() {
-});
-}
-}
-  
+  imagepick() async {
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+    if (image != null) {
+      _file = File(image.path);
+      BlocProvider.of<EditCubit>(context).file = _file;
+      setState(() {});
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        _file!=null?Image.file(_file!,):SizedBox() ,CustomeButton(
+        _file != null
+            ? Image.file(
+                _file!,
+              )
+            : SizedBox(),
+        CustomeButton(
           size: widget.size,
           onPressed: () {
             imagepick();
           },
-          titel: 'choice image',
+          titel: 'change image',
         ),
       ],
     );

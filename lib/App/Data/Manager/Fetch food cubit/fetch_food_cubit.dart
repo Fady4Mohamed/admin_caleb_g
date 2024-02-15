@@ -18,7 +18,7 @@ class FetchFoodCubit extends Cubit<FetchFoodState> {
   }
   emit(FetchFoodsuccsed());
 } on Exception catch (e) {
-  emit(FetchFoodfailer(e.toString()));
+  emit(FetchFoodfailure(e.toString()));
   print(e.toString());
 }
     

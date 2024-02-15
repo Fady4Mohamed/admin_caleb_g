@@ -76,7 +76,7 @@ class _AddBoodyState extends State<AddBoody> {
                         
                       });
                     }
-                    if (state is AddFailer) {
+                    if (state is AddFailure) {
                       buttoncolor = const Color.fromARGB(255, 95, 10, 4);
                        setState(() {
                         

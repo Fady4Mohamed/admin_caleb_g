@@ -20,14 +20,16 @@ editdata ({required String name,double? salary,String? image}) async {
  id= food.docs[0]['id'];
   if (id!='') {
      FirebaseFirestore.instance.collection('food').doc(id).update({
+      if(salary!=null)
       'price':salary,
+      if(image!=null)
       'image': image,
      });
   }
    emit(Editsuccess());
    
 } on Exception catch (e) {
-   emit(Editfailuer(Error: e.toString()));
+   emit(Editfailure(Error: e.toString()));
 }
  
   
