@@ -1,13 +1,14 @@
 import 'package:admin_caleb_g/App/Core/Styles/App_Colors.dart';
 import 'package:admin_caleb_g/App/Core/Styles/text_Style.dart';
+import 'package:admin_caleb_g/App/Data/Models/FoodModel.dart';
 import 'package:flutter/material.dart';
 
-class OrderData extends StatelessWidget {
-  const OrderData({
+class FoodData extends StatelessWidget {
+  const FoodData({
     super.key,
-    required this.size,
+    required this.size, required this.food,
   });
-
+ final FoodModel food;
   final Size size;
 
   @override
@@ -18,7 +19,7 @@ class OrderData extends StatelessWidget {
         SizedBox(
             width: size.width * .4,
             child: Text(
-              'fish dish hahaha',
+              food.name,
               style: tooBigscreen(context)
                   ? TextStyle(fontSize: 23)
                   : style.style17(size: size),
@@ -28,7 +29,7 @@ class OrderData extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                r'28612250$',
+                'GHS${food.price}',
                 style: tooBigscreen(context)
                     ? TextStyle(fontSize: 23, color: AppColors.kMainColor)
                     : style

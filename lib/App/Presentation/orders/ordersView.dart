@@ -1,5 +1,5 @@
-import 'package:admin_caleb_g/App/Presentation/Features/widgets/OrderGuidetext.dart';
-import 'package:admin_caleb_g/App/Presentation/Features/widgets/OrderListt.dart';
+import 'package:admin_caleb_g/App/Presentation/orders/widgets/OrderGuidetext.dart';
+import 'package:admin_caleb_g/App/Presentation/orders/widgets/OrderListt.dart';
 import 'package:admin_caleb_g/App/Presentation/Features/widgets/FeaturesAppBar.dart';
 import 'package:flutter/material.dart';
 

@@ -1,14 +1,15 @@
 
-import 'package:admin_caleb_g/App/Presentation/Features/widgets/OrderData.dart';
-import 'package:admin_caleb_g/App/Presentation/Features/widgets/OrderImage.dart';
+import 'package:admin_caleb_g/App/Data/Models/FoodModel.dart';
+import 'package:admin_caleb_g/App/Presentation/orders/widgets/FoodData.dart';
+import 'package:admin_caleb_g/App/Presentation/orders/widgets/FoodImage.dart';
 import 'package:flutter/material.dart';
 
-class OrderContainer extends StatelessWidget {
-  const OrderContainer({
+class foodcontainer extends StatelessWidget {
+  const foodcontainer({
     super.key,
-    required this.size,
+    required this.size, required this.food,
   });
-
+ final FoodModel food;
   final Size size;
 
   @override
@@ -25,9 +26,9 @@ class OrderContainer extends StatelessWidget {
       ], color: Colors.white, borderRadius: BorderRadius.circular(20)),
       child: Row(
         children: [
-          OrderImage(size: size),
+          FoodImage(size: size,food: food,),
           Spacer(),
-          OrderData(size: size),
+          FoodData(size: size,food: food,),
           Spacer(
             flex: 2,
           ),

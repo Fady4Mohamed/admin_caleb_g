@@ -1,4 +1,5 @@
-import 'package:admin_caleb_g/App/Presentation/Features/widgets/OrderContainer.dart';
+
+import 'package:admin_caleb_g/App/Presentation/orders/widgets/OrderContainer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -8,7 +9,6 @@ class OrderItem extends StatelessWidget {
     super.key,
     required this.size,
   });
-
   final Size size;
 
   @override
@@ -59,7 +59,7 @@ class OrderItem extends StatelessWidget {
          
         ],
       ) ,
-      child: OrderContainer(size: size),
+      child: Ordercontainer(size: size,),
     );
   }
 }

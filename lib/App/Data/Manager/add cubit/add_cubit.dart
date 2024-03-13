@@ -32,6 +32,7 @@ class AddCubit extends Cubit<AddState> {
   }
 
   Future<String> uploadImage() async {
+     emit(AddLoding());
     if (file != null) {
       String Imagepath =basename(file!.path);
       final storageRef = FirebaseStorage.instance.ref(Imagepath);

@@ -3,7 +3,7 @@ import 'package:admin_caleb_g/App/Data/Manager/UI%20cubit/chrom_ui_cubit.dart';
 import 'package:admin_caleb_g/App/Presentation/Features/Screens/AddView.dart';
 import 'package:admin_caleb_g/App/Presentation/Features/Screens/deletView.dart';
 import 'package:admin_caleb_g/App/Presentation/Features/Screens/editView.dart';
-import 'package:admin_caleb_g/App/Presentation/Features/Screens/ordersView.dart';
+import 'package:admin_caleb_g/App/Presentation/orders/ordersView.dart';
 import 'package:admin_caleb_g/App/Presentation/Home/screen/HomeView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
