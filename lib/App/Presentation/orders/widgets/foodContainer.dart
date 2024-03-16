@@ -1,4 +1,5 @@
 
+import 'package:admin_caleb_g/App/Data/Models/CartModel.dart';
 import 'package:admin_caleb_g/App/Data/Models/FoodModel.dart';
 import 'package:admin_caleb_g/App/Presentation/orders/widgets/FoodData.dart';
 import 'package:admin_caleb_g/App/Presentation/orders/widgets/FoodImage.dart';
@@ -7,9 +8,10 @@ import 'package:flutter/material.dart';
 class foodcontainer extends StatelessWidget {
   const foodcontainer({
     super.key,
-    required this.size, required this.food,
+    required this.size, required this.food, required this.cartitem,
   });
  final FoodModel food;
+ final cartmodel cartitem;
   final Size size;
 
   @override
@@ -28,7 +30,7 @@ class foodcontainer extends StatelessWidget {
         children: [
           FoodImage(size: size,food: food,),
           Spacer(),
-          FoodData(size: size,food: food,),
+          FoodData(size: size,food: food,cartitem:  cartitem,),
           Spacer(
             flex: 2,
           ),

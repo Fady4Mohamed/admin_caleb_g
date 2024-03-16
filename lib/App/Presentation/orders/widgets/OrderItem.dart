@@ -1,4 +1,5 @@
 
+import 'package:admin_caleb_g/App/Data/Models/order_model.dart';
 import 'package:admin_caleb_g/App/Presentation/orders/widgets/OrderContainer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -7,10 +8,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class OrderItem extends StatelessWidget {
   const OrderItem({
     super.key,
-    required this.size,
+    required this.size, required this.order,
   });
   final Size size;
-
+  final OrderModel order;
   @override
   Widget build(BuildContext context) {
     return Slidable(
@@ -59,7 +60,7 @@ class OrderItem extends StatelessWidget {
          
         ],
       ) ,
-      child: Ordercontainer(size: size,),
+      child: Ordercontainer(size: size,orderModel: order,),
     );
   }
 }

@@ -1,14 +1,16 @@
 import 'package:admin_caleb_g/App/Core/Styles/App_Colors.dart';
 import 'package:admin_caleb_g/App/Core/Styles/text_Style.dart';
+import 'package:admin_caleb_g/App/Data/Models/CartModel.dart';
 import 'package:admin_caleb_g/App/Data/Models/FoodModel.dart';
 import 'package:flutter/material.dart';
 
 class FoodData extends StatelessWidget {
   const FoodData({
     super.key,
-    required this.size, required this.food,
+    required this.size, required this.food, required this.cartitem,
   });
  final FoodModel food;
+ final cartmodel cartitem;
   final Size size;
 
   @override
@@ -45,7 +47,7 @@ class FoodData extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        '  32  ',
+                        '  ${cartitem.amount}  ',
                         style: tooBigscreen(context)
                             ? TextStyle(fontSize: 23)
                             : style.style12(size: size),
