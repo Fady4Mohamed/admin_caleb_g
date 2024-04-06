@@ -1,6 +1,6 @@
 
 
-import 'package:admin_caleb_g/App/Data/Manager/cubit/cart_cubit.dart';
+import 'package:admin_caleb_g/App/Data/Manager/cart%20cubit/cart_cubit.dart';
 import 'package:admin_caleb_g/App/Data/Models/order_model.dart';
 import 'package:admin_caleb_g/App/Presentation/orders/widgets/FoodList.dart';
 import 'package:flutter/material.dart';
@@ -22,10 +22,20 @@ class cartlistbuilder extends StatelessWidget {
         if (state is Cartsuccsed) {
           return FoodList(size: size,);
         }if(state is Cartloding){
-          return Text('loding ...');
+          return  Column(
+            children: [
+             const Text('loding ...'),
+              SizedBox(height: size.height*0.7,)
+            ],
+          );
         }if(state is Cartfailure){
           print(state.error);
-          return Text('error ...');
+          return  Column(
+            children: [
+            const  Text('error ...'),
+              SizedBox(height: size.height*0.7,)
+            ],
+          );
         }else{
           return SizedBox();
         }

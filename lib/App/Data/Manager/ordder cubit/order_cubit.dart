@@ -2,13 +2,13 @@ import 'package:admin_caleb_g/App/Data/Models/order_model.dart';
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:meta/meta.dart';
-
 part 'order_state.dart';
 
 class OrderCubit extends Cubit<OrderState> {
   OrderCubit() : super(OrderInitial());
   List<OrderModel> allorderlist = [];
   getallorders() async {
+    allorderlist.clear();
     emit(Orderloding());
     try {
       QuerySnapshot data =

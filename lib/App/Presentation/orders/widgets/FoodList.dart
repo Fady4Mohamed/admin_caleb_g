@@ -1,4 +1,4 @@
-import 'package:admin_caleb_g/App/Data/Manager/cubit/cart_cubit.dart';
+import 'package:admin_caleb_g/App/Data/Manager/cart%20cubit/cart_cubit.dart';
 import 'package:admin_caleb_g/App/Data/Models/CartModel.dart';
 import 'package:admin_caleb_g/App/Data/Models/FoodModel.dart';
 import 'package:admin_caleb_g/App/Presentation/orders/widgets/foodContainer.dart';

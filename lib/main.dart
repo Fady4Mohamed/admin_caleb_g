@@ -1,11 +1,13 @@
 import 'package:admin_caleb_g/App/Data/Manager/UI%20cubit/chrom_ui_cubit.dart';
+import 'package:admin_caleb_g/App/Data/Manager/complet%20order%20cubit/complet_order_cubit.dart';
+import 'package:admin_caleb_g/App/Data/Manager/ordder%20cubit/order_cubit.dart';
 import 'package:admin_caleb_g/App/Presentation/auth/loginView.dart';
 import 'package:admin_caleb_g/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -21,8 +23,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     print(size.width);
-    return BlocProvider(
-      create: (context) => ChromUiCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => ChromUiCubit(),
+        ),
+        BlocProvider(
+          create: (context) => CompletOrderCubit(),
+        ),
+        BlocProvider(
+          create: (context) => OrderCubit(),
+        ),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
@@ -34,5 +46,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
