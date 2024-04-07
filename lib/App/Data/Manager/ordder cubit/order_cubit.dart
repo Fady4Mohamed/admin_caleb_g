@@ -6,22 +6,31 @@ part 'order_state.dart';
 
 class OrderCubit extends Cubit<OrderState> {
   OrderCubit() : super(OrderInitial());
+  // under editing
   List<OrderModel> allorderlist = [];
+  Stream<QuerySnapshot> data =
+      FirebaseFirestore.instance.collection('orders').snapshots();
   getallorders() async {
-    allorderlist.clear();
+    print('1');
     emit(Orderloding());
     try {
-      QuerySnapshot data =
-          await FirebaseFirestore.instance.collection('orders').get();
-      for (int v = 0; v < data.docs.length; v++) {
-        allorderlist.add(OrderModel.fromjason(data.docs[v]));
-      }
-      emit(Ordersuccess());
-    } on Exception catch (e) {
+      data.listen((QuerySnapshot snapshot) {
+        print('2');
+        allorderlist.clear();
+        for (var document in snapshot.docs) {
+          allorderlist.add(OrderModel.fromjson(document.data()));
+        }
+        print('3');
+        emit(Ordersuccess());
+      }, onError: (e) {
+        emit(OrderFailure(error: e.toString()));
+        print(e.toString());
+         print('4');
+      });
+      print('5');
+    } catch (e) {
       emit(OrderFailure(error: e.toString()));
       print(e.toString());
     }
   }
-  
-
 }

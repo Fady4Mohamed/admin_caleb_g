@@ -11,7 +11,7 @@ class OrderModel {
       required this.price,
       required this.cliencart});
 
-  factory OrderModel.fromjason(jsonData) {
+  factory OrderModel.fromjson(jsonData) {
     return OrderModel(
         date: jsonData['date'],
         adresse: jsonData['adresse'],
